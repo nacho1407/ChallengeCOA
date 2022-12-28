@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<!--
+<div *ngFor="let entry of cartEntries$ | async" class="cart-entry">
+  <div class="space"></div>
+  <div class="entry-details">
+    <div class="product-name">
+      {{ entry.producto.Name }}
+    </div>
+    <div class="count">Count: {{ entry.cantidad }}</div>
+    <div class="detail-button-row">
+      <div class="space"></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="space"></div>
+</div> -->
+
+<ag-grid-angular
+  class="ag-theme-alpine"
+  style="width: 750px; height: 300px; text-align: center; margin: 100px auto"
+  [rowData]="rowData$"
+  [columnDefs]="columnDefs"
+>
+</ag-grid-angular>
+
+<div style="text-align: right">
+  <button
+    mat-raised-button
+    (click)="generarOrden()"
+    color="primary"
+    style="margin-right: 10px"
+  >
+    Generar Orden
+  </button>
+  <button
+    mat-raised-button
+    (click)="borrarCarrito()"
+    color="warn"
+    style="margin-right: 10px"
+  >
+    Borrar Todos
+  </button>
+</div>

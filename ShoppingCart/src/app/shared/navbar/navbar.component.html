@@ -1,0 +1,17 @@
+<div class="header-container">
+  <div class="route">
+    <a style="font-size: larger" routerLink="/producto" class="route-link"
+      >Productos</a
+    >
+  </div>
+  <div class="space"></div>
+  <div class="cart-icon">
+    <a routerLink="/carrito"
+      ><mat-icon style="margin-top: 10px">shopping_cart</mat-icon></a
+    >
+  </div>
+  <div class="counter">Total Productos: {{ productoCont$ | async }}</div>
+  <div class="total-price">
+    Precio Total: {{ precioTotal$ | async | number : "1.2-2" }}
+  </div>
+</div>
